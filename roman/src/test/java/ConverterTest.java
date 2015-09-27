@@ -8,12 +8,14 @@ import static org.hamcrest.Matchers.is;
  */
 public class ConverterTest {
 
+    private String convert(int arabic) {
+        if (arabic == 1) return "I";
+        return "";
+    }
+
     @Test
     public void testConvert() {
         assertThat(convert(0), is(""));
-    }
-
-    private String convert(int arabic) {
-        return "";
+        assertThat(convert(1), is("I"));
     }
 }
